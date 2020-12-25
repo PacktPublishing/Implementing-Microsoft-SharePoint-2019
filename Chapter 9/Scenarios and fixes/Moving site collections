@@ -1,0 +1,1 @@
+Move-SPSite http://webapp/sites -DestinationDatabase NewContentDb
