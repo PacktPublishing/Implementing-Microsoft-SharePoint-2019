@@ -1,0 +1,4 @@
+$AppPoolAccount = "XYZINC\spuserprofapp"
+ $AppPoolName = "UPS_App_Pool"
+$AppPool = New-SPServiceApplicationPool -Name
+$AppPoolName -Account $AppPoolAccount
