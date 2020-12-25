@@ -1,0 +1,1 @@
+Install-SPSolution –Identity ReportViewerWebPart.wsp -GACDeployment -AllWebApplications
