@@ -1,0 +1,1 @@
+New-SPProfileServiceApplicationProxy -Name 'XYZ UPS Application Proxy' -ServiceApplication "9b9c4c22-fb99- 4f32-88ff-9f66d9f47eb2"-DefaultProxyGroup
