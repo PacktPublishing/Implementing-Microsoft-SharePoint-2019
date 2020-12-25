@@ -1,0 +1,1 @@
+Start-SPServiceInstance -Identity <ServiceGUID>
