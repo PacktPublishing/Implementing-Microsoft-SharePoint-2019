@@ -1,0 +1,1 @@
+Add-SPSolution –LiteralPath "Drive:\*solutionfolder*\ReportViewerWebPart.wsp"
