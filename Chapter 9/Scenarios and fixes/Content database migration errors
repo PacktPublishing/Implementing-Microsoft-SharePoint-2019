@@ -1,0 +1,2 @@
+Mount-SPContentDatabase "WSS_Content" -DatabaseServer
+"DBSERVERNAME or ALIAS" -WebApplication "https://WebApplication/" -AssignNewDatabaseId
