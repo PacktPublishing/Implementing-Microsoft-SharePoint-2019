@@ -1,0 +1,3 @@
+Add-pssnapin Microsoft.SharePoint.PowerShell
+New- New-SPServiceApplicationPool -Name "Word Conversion Services Application Pool" -Account <<service application account>>
+Get- New-SPServiceApplicationPool -Identity <<application pool name>> | New-SPWordConversionServiceApplication -Name "Word Conversion Services"
