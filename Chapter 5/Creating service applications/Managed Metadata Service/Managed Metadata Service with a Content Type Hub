@@ -1,0 +1,1 @@
+New-SPMetadataServiceApplication -Name "MetadataServiceAppName" -ApplicationPool "AppPoolName" -DatabaseName "MetadataDBName" -HubUri "https://sitename" -SyndicationErrorReportEnabled
