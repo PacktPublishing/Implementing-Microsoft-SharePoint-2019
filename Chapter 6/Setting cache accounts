@@ -1,0 +1,17 @@
+$wa = Get-SPWebApplication http://spweb.xyzinc.local
+$wa.Properties["portalsuperuseraccount"] = "i:o#.w|xyzinc\
+swritecache"
+$wa.Properties[:portalsuperreaderaccount"] = "i.o#.w|xyzinc\
+sreadcache"
+$wa.Update()
+$wa = Get-SPWebApplication http://spweb.xyzinc.local
+$zp = $wa.ZonePolicies("Default")
+$policy = $zp.Add("i.o#.w|xyzinc\swritecache", "Portal Super
+User")
+$policyRole = $wa.PolicyRoles.GetSpecialRole(:FullControl")
+$policy.PolicyRoleBindings.Add($policyRole)
+$policy = $zp.Add("i:o#.w|xyzinc\sreadcache", "Portal Super
+Reader")
+$policyRole = $wa.PolicyRoles.GetSpecialRole("FullRead")
+$policy.PolicyRoleBindings.Add($policyRole)
+$wa.Update()
