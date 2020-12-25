@@ -1,0 +1,3 @@
+$site = New-Object Microsoft.SharePoint.SpSite("https://sitename")
+$web = $site.OpenWeb()
+$mail = [Microsoft.Sharepoint.Utilities.SpUtility]::SendEmail($web,0,0,"lewin@xyz.com","Testing from PowerShell", "This is a test from PowerShell and server APP1")
