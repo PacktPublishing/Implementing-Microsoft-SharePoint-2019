@@ -1,0 +1,1 @@
+Set-SPAlternateURL -Identity http://spweb.xyzinc.local -Zone "Internet"
