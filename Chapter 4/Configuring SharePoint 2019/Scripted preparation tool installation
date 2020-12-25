@@ -1,0 +1,15 @@
+.\prerequisiteinstaller.exe
+   /SQLNCli:c:\(Folder)\sqlncli.msi
+  /Sync:c:\(Folder)\Synchronization.msi
+  /AppFabric:c:\(Folder)\WindowsServerAppFabricSetup_x64.exe
+  /IDFX11:c:\(Folder)\MicrosoftIdentityExtensions-64.msi
+  /MSIPCClient:c:\(Folder)\setup_msipc_x64.exe
+  /WCFDataServices56:c:\(Folder)\WcfDataServices56.exe
+  /MSVCRT11:c:\(Folder)\vcredist_x64.exe
+  /MSVCRT141:c:\(Folder)\vc_redist.x64.exe
+  /KB3092423:c:\(Folder)\AppFabric-KB3092423-x64-ENU.exe
+  /DotNet472:c:\(Folder)\NDP472-KB4054530-x86-x64-AllOS-ENU.exe
+  /MSVCRT11:<file> Install Visual C++ Redistributable Package
+for Visual Studio 2012 from <file>.
+  /MSVCRT141:<file> Install Visual C++ Redistributable Package
+for Visual Studio 2017 from <file>.
