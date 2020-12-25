@@ -1,0 +1,1 @@
+Get-SPSite -Limit All -ContentDatabase contentdbname | select url, @{label="Size";Expression={$_.usage.storage}}
