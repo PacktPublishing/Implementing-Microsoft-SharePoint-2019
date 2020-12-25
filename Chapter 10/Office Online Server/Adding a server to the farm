@@ -1,0 +1,1 @@
+New-OfficeWebAppsMachine -MachineToJoin "server1.contoso.com"
