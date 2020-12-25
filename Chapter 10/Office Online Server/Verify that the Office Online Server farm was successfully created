@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+- <wopi-discovery>
+- <net-zone name="internal-http">
+- <app name="Excel" favIconUrl="http://servername/x/_layouts/images/FavIcon_Excel.ico" checkLicense="true">
+<action name="view" ext="ods" default="true" urlsrc="http://servername/x/_layouts/xlviewerinternal.aspx?<ui=UI_LLCC&amp;><rs=DC_LLCC&amp;>" />
+<action name="view" ext="xls" default="true" urlsrc="http://servername/x/_layouts/xlviewerinternal.aspx?<ui=UI_LLCC&amp;><rs=DC_LLCC&amp;>" />
+<action name="view" ext="xlsb" default="true" urlsrc="http://servername/x/_layouts/xlviewerinternal.aspx?<ui=UI_LLCC&amp;><rs=DC_LLCC&amp;>" />
+<action name="view" ext="xlsm" default="true" urlsrc="http://servername/x/_layouts/xlviewerinternal.aspx?<ui=UI_LLCC&amp;><rs=DC_LLCC&amp;>" />
