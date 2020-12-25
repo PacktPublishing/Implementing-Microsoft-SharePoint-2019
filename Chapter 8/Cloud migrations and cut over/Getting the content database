@@ -1,0 +1,1 @@
+Get-SPContentDatabase | %{Write-Output "- $($_.Name)"; foreach($site in $_.sites){write-Output $site.url}} > Drive\Folder\sitecollections.txt
