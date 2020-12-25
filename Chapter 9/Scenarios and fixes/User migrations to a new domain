@@ -1,0 +1,2 @@
+$user = Get-SPUser -Identity "DOMAIN\JaneDoe" -Web https:// webUrl
+Move-SPUser -Identity $user -NewAlias "Domain\JaneSmith" -IgnoreSid
