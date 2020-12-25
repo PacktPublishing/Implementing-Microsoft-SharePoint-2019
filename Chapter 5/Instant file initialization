@@ -1,0 +1,1 @@
+Alter Database [model] MODIFY FILE (NAME = modeldev, SIZE = 150mb, MAXSIZE = Unlimited
