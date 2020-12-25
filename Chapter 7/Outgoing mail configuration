@@ -1,0 +1,26 @@
+#Set Outgoing Mail:
+$ca = Get-SPWebApplication -IncludeCentralAdministration |
+?{$_.ISAdministrationWebApplication -eq $true}
+ $sendAd = "SPSMessage@xyzinc.com"
+ $replyAd = "SPSMessage@xyzinc.com"
+ SsmtpSvr = "mail.xyzinc.com"
+ Sca.UpdateMailsettings($smtpServer, $senderAddr, $replyAddr, 65001, $true, 587)
+
+#To Test Outgoing Mail:
+
+Add-PSSnapin Microsoft.SharePoint.PowerShell -ErrorAction SilentlyContinue
+
+ #Parameters
+ $EmailTo = "yourname@company.com"
+ $EmailSubject = "Test Email from your company SharePoint Farm"
+ $EmailBody = "Test Email Body"
+
+ #Get the outgoing Email Server settings:
+ $SPGlobalAdmin = New-Object Microsoft.SharePoint. Administration.SPGlobalAdmin
+ $SMTPServer = $SPGlobalAdmin.OutboundSmtpServer
+ $EmailFrom = $SPGlobalAdmin.MailFromAddress
+
+ #Send-Mail Message:
+ Send-MailMessage -To $EmailTo -From $EmailFrom -Subject
+$EmailSubject -Body $EmailBody -BodyAsHtml -SmtpServer
+$SmtpServer
