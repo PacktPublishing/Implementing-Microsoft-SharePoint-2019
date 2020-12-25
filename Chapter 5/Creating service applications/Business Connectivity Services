@@ -1,0 +1,1 @@
+New-SPBusinessDataCatalogServiceApplication -ApplicationPool "SharePoint Web Services Default" -DatabaseName "NewBdcDB" -DatabaseServer "YourDomain\SharePoint" -Name "YourServiceApp"
