@@ -1,0 +1,20 @@
+netsh advfirewall firewall add rule name="SharePoint Open Port 80" dir=out action=allow protocol=TCP localport=80
+netsh advfirewall firewall add rule name="SharePoint Open Port 443" dir=out action=allow protocol=TCP localport=443
+netsh advfirewall firewall add rule name="SharePoint SQL Open Ports" dir=out action=allow protocol=TCP localport=1433-1434
+netsh advfirewall firewall add rule name="SharePoint SQL Open Port 445" dir=out action=allow protocol=TCP localport=445
+netsh advfirewall firewall add rule name="SharePoint Open Port 25" dir=out action=allow protocol=TCP localport=25
+netsh advfirewall firewall add rule name="SharePoint Open Port 16500-16519" dir=out action=allow protocol=TCP localport=16500-16519
+netsh advfirewall firewall add rule name="SharePoint Open Port 22233" dir=out action=allow protocol=TCP localport=22233-22236
+netsh advfirewall firewall add rule name="SharePoint Open Port 443" dir=out action=allow protocol=TCP localport=443
+netsh advfirewall firewall add rule name="SharePoint Open Port 808" dir=out action=allow protocol=TCP localport=808
+netsh advfirewall firewall add rule name="SharePoint Open Port 32843" dir=out action=allow protocol=TCP localport=32843-32846
+netsh advfirewall firewall add rule name="SharePoint Workflow Manager Open Port 12290-12291" dir=out action=allow protocol=TCP localport=12290-12291
+netsh advfirewall firewall add rule name="SharePoint Open Port 5725" dir=out action=allow protocol=TCP localport=5725
+netsh advfirewall firewall add rule name="SharePoint Open Port 389" dir=out action=allow protocol=TCP localport=389
+netsh advfirewall firewall add rule name="SharePoint Open Port 389" dir=out action=allow protocol=UDP localport=389
+netsh advfirewall firewall add rule name="SharePoint Open Port 88" dir=out action=allow protocol=TCP localport=88
+netsh advfirewall firewall add rule name="SharePoint Open Port 88" dir=out action=allow protocol=UDP localport=88
+netsh advfirewall firewall add rule name="SharePoint Open Port 53" dir=out action=allow protocol=TCP localport=53
+netsh advfirewall firewall add rule name="SharePoint Open Port 53" dir=out action=allow protocol=UDP localport=53
+netsh advfirewall firewall add rule name="SharePoint Open Port 464" dir=out action=allow protocol=UDP localport=464
+netsh advfirewall firewall add rule name="SharePoint Open Port 809" dir=out action=allow protocol=TCP localport=809
