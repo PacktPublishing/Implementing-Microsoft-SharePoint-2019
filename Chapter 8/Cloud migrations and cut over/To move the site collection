@@ -1,0 +1,1 @@
+Move-SPSite <Site-Collection-URL> –DestinationDatabase "<Database-Name>"
