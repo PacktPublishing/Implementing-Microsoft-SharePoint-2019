@@ -1,0 +1,7 @@
+Add-PSSnapin Microsoft.SharePoint.PowerShell
+ $UPSName = "XYZ UPS Service Application"
+ $ApplicationPool = "UPS_App_Pool"
+ $ProfileDBName = "XYZ_UPS_Profile_Service"
+ $SocialDBName = "XYZ_UPS_Social_Service"
+ $SyncDBName = "XYZ_UPS_Sync_Service"
+ New-SPProfileServiceApplication -Name $UPSName -ApplicationPool $ApplicationPool -ProfileDBName $ProfileDBName -SocialDBName $SocialDBName -ProfileSyncDBName $SyncDBName
