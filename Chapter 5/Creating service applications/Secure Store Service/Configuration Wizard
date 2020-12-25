@@ -1,0 +1,1 @@
+PSConfig.exe -cmd upgrade -inplace b2b
