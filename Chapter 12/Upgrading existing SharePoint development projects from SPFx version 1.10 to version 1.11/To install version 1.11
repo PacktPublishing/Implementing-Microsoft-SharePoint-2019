@@ -1,0 +1,1 @@
+npm install @microsoft/{spfx-package-name}@1.11 --save --save-exact
