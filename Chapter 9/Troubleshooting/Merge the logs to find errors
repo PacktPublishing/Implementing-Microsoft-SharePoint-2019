@@ -1,0 +1,1 @@
+Merge-SPLogFile -Path "D:\Output\SSRSService.log" -Overwrite -StartTime "06/09/2008 16:00" -EndTime "06/09/2008 16:15"
