@@ -1,0 +1,1 @@
+Get-SPWebApplication -Identity https://spweb.xyzinc.com | New-SPWebApplicationExtension -Name XYZ SPWeb External Web Application -HostHeader spwebexternal.xyzinc.com -Zone Internet -URL https://spwebexternal.xyzinc.com -Port 443 -AuthenticationProvider NTLM
