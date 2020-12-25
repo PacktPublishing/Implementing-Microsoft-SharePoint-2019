@@ -1,0 +1,1 @@
+New-SPWebApplication -Name "XYZ Company Web Application" -Port 80 -HostHeader spweb.xyzinc.local -URL "https:// spweb.xyzinc.local" -ApplicationPool "spweb_App_Pool" -ApplicationPoolAccount (Get-SPManagedAccount "xyzinc\ websrvact")
