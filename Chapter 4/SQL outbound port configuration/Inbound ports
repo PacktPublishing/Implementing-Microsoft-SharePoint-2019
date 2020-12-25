@@ -1,0 +1,10 @@
+netsh advfirewall firewall add rule name="SQL Default TCP Port 1433" dir=in action=allow protocol=TCP localport=1433
+netsh advfirewall firewall add rule name="SQL Named Instance TCP Port 1434" dir=in action=allow protocol=TCP localport=1434
+netsh advfirewall firewall add rule name="SQL Named Instance UDP Port 1434" dir=in action=allow protocol=UDP localport=1434
+netsh advfirewall firewall add rule name="SQL Broker UDP Port 4022" dir=in action=allow protocol=TCP localport=4022
+netsh advfirewall firewall add rule name="SQL DB Mirroring TCP Port 5022" dir=in action=allow protocol=TCP localport=5022
+netsh advfirewall firewall add rule name="SQL DB Mirroring TCP Port 7022" dir=in action=allow protocol=TCP localport=7022
+netsh advfirewall firewall add rule name="SQL Analysis Services TCP Port 2383" dir=in action=allow protocol=TCP localport=2383
+netsh advfirewall firewall add rule name="SQL Browser TCP Port 2382" dir=in action=allow protocol=TCP localport=2382
+netsh advfirewall firewall add rule name="SQL IPSec UDP Port 500" dir=in action=allow protocol=UDP localport=500
+netsh advfirewall firewall add rule name="SQL IPSec DB Mirroring TCP Port 4500" dir=in action=allow protocol=TCP localport=4500
