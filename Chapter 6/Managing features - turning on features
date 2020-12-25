@@ -1,0 +1,1 @@
+Enable-SPFeature -identity "Video Processing" -URL http://spweb.xyzinc.local
