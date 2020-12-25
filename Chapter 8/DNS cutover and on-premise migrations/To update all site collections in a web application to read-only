@@ -1,0 +1,8 @@
+# Get the Web Application
+$WebApp = Get-SPWebApplication "https://my.company.com"
+#Loop through all site collections and Set read only status
+   foreach ($SPsite in $webApp.Sites)
+  {
+    $SPsite.ReadOnly = $true
+    #Or : Set-SPSiteAdministration -LockState "Unlock" -Identity $SPsite.url
+ }
