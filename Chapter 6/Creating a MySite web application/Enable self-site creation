@@ -1,0 +1,2 @@
+$w = Get-SPWebApplication http://spweb.xyzinc.local
+$w.SelfServiceSiteCreationEnabled =$True $w.Update()
