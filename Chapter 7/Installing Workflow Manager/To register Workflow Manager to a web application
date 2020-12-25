@@ -1,0 +1,1 @@
+Register-SPWorkflowService -SPSite "https://site.yourcompany.com" -WorkflowHostUri "https://your.workflowurl.com:12290" -force
