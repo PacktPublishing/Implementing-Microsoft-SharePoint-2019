@@ -1,0 +1,2 @@
+HTTP: New-OfficeWebAppsFarm -InternalURL "http://servername" -AllowHttp -EditingEnabled
+HTTPS: New-OfficeWebAppsFarm -InternalUrl "https://server.contoso.com" -ExternalUrl "https://wacweb01.contoso.com" -CertificateName "OfficeWebApps Certificate" -EditingEnabled
