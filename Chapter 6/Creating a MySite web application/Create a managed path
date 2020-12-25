@@ -1,0 +1,4 @@
+New-SPManagedPath -RelativeUrl "HR" -WebApplication http://spweb.xyzinc.local
+$wa = Get-SPWebApplication http://spweb.xyzinc.local
+$wa.SelfServiceSiteCreationEnabled = $true
+$wa.Update()
