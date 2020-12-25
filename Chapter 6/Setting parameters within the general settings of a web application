@@ -1,0 +1,2 @@
+$siteURL = "http://spweb.xyzinc.local" | $webApp = Get-SPWebApplication $siteURL
+$webApp.BrowserFileHandling = [Microsoft.SharePoint. SPBrowserFileHandling]::Permissive
