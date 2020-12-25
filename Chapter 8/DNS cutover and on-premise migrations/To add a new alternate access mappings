@@ -1,0 +1,1 @@
+New-SPAlternateURL –WebApplication "http://server.yourcompany.com" -URL "http://sp.yourcompany.com" –Zone Internet
