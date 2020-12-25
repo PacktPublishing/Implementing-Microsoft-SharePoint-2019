@@ -1,0 +1,2 @@
+Set-SPWOPIZone -zone "internal-http"
+(Get-SPSecurityTokenServiceConfig).AllowOAuthOverHttp
