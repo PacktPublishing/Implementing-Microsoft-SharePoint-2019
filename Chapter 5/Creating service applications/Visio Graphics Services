@@ -1,0 +1,1 @@
+New-SPVisioServiceApplication -Identity 'Visio Graphics Service Application' -ApplicationPool 'SharePoint Web Services Default' -CreateDefaultProxy
