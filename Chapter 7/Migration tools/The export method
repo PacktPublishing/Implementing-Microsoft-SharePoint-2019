@@ -1,0 +1,4 @@
+Add-PSSnapin Microsoft.SharePoint.Powershell $metadataApp= GetSpServiceApplication | ? {$_.TypeName -eq "Managed metadata
+Service"} $mmsAppId = $metadataApp.Id $mmsproxy = GetSPServiceApplicationProxy | ?{$_.TypeName -eq "Managed metadata
+Service Connection"} Export-SPMetadataWebServicePartitionData
+-Identity $mmsAppId -ServiceProxy $mmsproxy -Path "C:\MMD.cab"
