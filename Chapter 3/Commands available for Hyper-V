@@ -1,1 +1,1 @@
-Get-Command -Module Hyper-V -IncludeManagementTools -Restart
+Get-Command -Module Hyper-V 
