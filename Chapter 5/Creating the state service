@@ -1,7 +1,4 @@
-$db = New-SPStateServiceDatabase -Name "XYZ State Service
-Application"
-$sa = New-SPStateServiceApplication - Name "XYZ_State_Service"
--Database $db
-New-SPStateServiceApplicationProxy -Name "XYZ State Service
-Application Proxy" -ServiceApplication $sa
+$db = New-SPStateServiceDatabase -Name "XYZ State ServiceApplication"
+$sa = New-SPStateServiceApplication - Name "XYZ_State_Service" -Database $db
+New-SPStateServiceApplicationProxy -Name "XYZ State Service Application Proxy" -ServiceApplication $sa
 -Default Proxy Group
