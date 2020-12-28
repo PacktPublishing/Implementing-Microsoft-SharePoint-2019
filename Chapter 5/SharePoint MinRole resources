@@ -5,12 +5,8 @@ $ConfigDatabase = "Farm_Config"
 $Passphrase = "57J7902KK9Srww$!#LiPQ"
 $FarmAccountName = "Montego\SP_Farm"
 $ServerRole="Application"
-#"Custom","WebFrontEnd","Application","DistributedCache",
-"SingleServerFarm","Search","ApplicationWithSearch",
-"WebFrontEndWithDistributedCache"
-Connect-SPConfigurationDatabase -DatabaseServer
-$DBServer -DatabaseName $DBName -PassPhrase $Passphrase
--LocalServerRole $ServerRole
+#"Custom","WebFrontEnd","Application","DistributedCache", "SingleServerFarm","Search","ApplicationWithSearch", "WebFrontEndWithDistributedCache"
+Connect-SPConfigurationDatabase -DatabaseServer $DBServer -DatabaseName $DBName -PassPhrase $Passphrase -LocalServerRole $ServerRole
 Write-Host "Installing SharePoint Resources..."
 Initialize-SPResourceSecurity
 Write-Host "Installing Farm Services ..."
