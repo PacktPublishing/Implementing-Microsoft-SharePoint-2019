@@ -1,0 +1,97 @@
+﻿####Run this script with an account that is a farm admin, use the search service account for the app pool user identity. Input areas as needed where "" descriptions of the actions are needed.####
+
+$ssaAppPoolName = ""
+$SearchappPoolUserName = ""
+
+$ssaAppPool = Get-SPServiceApplicationPool -Identity $ssaAppPoolName -EA 0
+if($ssaAppPool -eq $null)
+{
+Write-Host ""
+ 
+$SearchappPoolAccount = Get-SPManagedAccount -Identity $SearchappPoolUserName -EA 0
+if($SearchappPoolAccount -eq $null)
+{
+Write-Host ""
+$ssappPoolCred = Get-Credential $SearchappPoolUserName
+$SearchappPoolAccount = New-SPManagedAccount -Credential $ssappPoolCred -EA 0
+}
+ 
+$SearchappPoolAccount = Get-SPManagedAccount -Identity $SearchappPoolUserName -EA 0
+ 
+if($SearchappPoolAccount -eq $null)
+{
+Write-Host "Cannot create or find the managed account $SearchappPoolUserName."
+Exit -1
+}
+ 
+New-SPServiceApplicationPool -Name $ssaAppPoolName -Account $SearchappPoolAccount -EA 0 > $null
+ 
+}
+ 
+ 
+ 
+## Search Specifics, we are single server farm ##
+ 
+$searchServerName = (Get-ChildItem env:computername).value
+ 
+$serviceAppName = ""
+ 
+$searchDBName = ""
+ 
+ 
+## Grab the Appplication Pool for Service Application Endpoint ##
+ 
+$ssaAppPool = Get-SPServiceApplicationPool $ssaAppPoolName
+ 
+## Start Search Service Instances ##
+ 
+Write-Host ""
+ 
+Start-SPEnterpriseSearchServiceInstance $searchServerName
+ 
+Start-SPEnterpriseSearchQueryAndSiteSettingsServiceInstance $searchServerName
+ 
+## Create the Search Service Application and Proxy ##
+ 
+Write-Host ""
+ 
+$searchServiceApp = New-SPEnterpriseSearchServiceApplication -Name $serviceAppName -ApplicationPool $ssaAppPoolName -DatabaseName $searchDBName
+ 
+$searchProxy = New-SPEnterpriseSearchServiceApplicationProxy -Name "$serviceAppName Proxy" -SearchApplication $searchServiceApp
+ 
+## Clone the default Topology (which is empty) and create a new one and then activate it ##
+ 
+Write-Host ""
+ 
+$appserv = Get-SPEnterpriseSearchServiceInstance -Identity $searchServerName
+ 
+ 
+Get-SPEnterpriseSearchServiceInstance -Identity $appserv
+ 
+ 
+$ssa = Get-SPEnterpriseSearchServiceApplication
+ 
+ 
+$newTopology = New-SPEnterpriseSearchTopology -SearchApplication $ssa
+ 
+ 
+New-SPEnterpriseSearchAdminComponent -SearchTopology $newTopology -SearchServiceInstance $appserv
+ 
+New-SPEnterpriseSearchCrawlComponent -SearchTopology $newTopology -SearchServiceInstance $appserv
+ 
+New-SPEnterpriseSearchContentProcessingComponent -SearchTopology $newTopology -SearchServiceInstance $appserv
+ 
+New-SPEnterpriseSearchAnalyticsProcessingComponent -SearchTopology $newTopology -SearchServiceInstance $appserv
+ 
+New-SPEnterpriseSearchQueryProcessingComponent -SearchTopology $newTopology -SearchServiceInstance $appserv
+ 
+New-SPEnterpriseSearchIndexComponent -SearchTopology $newTopology -SearchServiceInstance $appserv -IndexPartition 0 -RootDirectory ""
+ 
+ 
+Set-SPEnterpriseSearchTopology -Identity $newTopology
+ 
+ 
+ 
+Write-Host "Search Server Creation Complete!"
+ 
+##END SEARCH
