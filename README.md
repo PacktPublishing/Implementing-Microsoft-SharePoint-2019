@@ -1,8 +1,3 @@
-## $5 Tech Unlocked 2021!
-[Buy and download this product for only $5 on PacktPub.com](https://www.packtpub.com/)
------
-*The $5 campaign         runs from __December 15th 2020__ to __January 13th 2021.__*
-
 # Implementing Microsoft SharePoint 2019
 
 <a href="https://www.packtpub.com/product/implementing-microsoft-sharepoint-2019/9781789615371?utm_source=github&utm_medium=repository&utm_campaign=9781789615371"><img src="https://static.packt-cdn.com/products/9781789615371/cover/smaller" alt="Implementing Microsoft SharePoint 2019" height="256px" align="right"></a>
